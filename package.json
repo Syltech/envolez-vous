@@ -1,0 +1,36 @@
+{
+  "name": "gulp-sass-pug-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for starting a fresh new project with Gulp + SASS + PUG",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syltech/gulp-sass-pug-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syltech/gulp-sass-pug-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Syltech/gulp-sass-pug-boilerplate#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^5.0.0",
+    "tinyify": "^3.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-ftp": "^0.6.1",
+    "vinyl-source-stream": "^2.0.0",
+    "js-yaml": "^4.0.0"
+  },
+  "dependencies": {}
+}
