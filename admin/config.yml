@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master 
+media_folder: "_site/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - label: "Configuration"
+    name: "configuration"
+    file: "src/_data/configuration.yml"
+    editor:
+      preview: false
+    fields: 
+      - label: "Date de la course"
+        name: "dateCourse"
+        widget: "datetime"
+        default: ""
+        date_format: "DD/MM/YYYY"
+        tile_format: "HH:mm"
