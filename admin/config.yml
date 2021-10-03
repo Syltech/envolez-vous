@@ -6,13 +6,16 @@ public_folder: "/images/uploads"
 collections:
   - label: "Configuration"
     name: "configuration"
-    file: "src/_data/configuration.yml"
     editor:
       preview: false
-    fields: 
-      - label: "Date de la course"
-        name: "dateCourse"
-        widget: "datetime"
-        default: ""
-        date_format: "DD/MM/YYYY"
-        tile_format: "HH:mm"
+    files:
+      - label: "Dates"
+        name: "dates"
+        file: "src/_data/dates.yaml"
+        fields:
+          - label: "Date de la course"
+            name: "dateCourse"
+            widget: "datetime"
+            default: ""
+            date_format: "DD/MM/YYYY"
+            tile_format: "HH:mm"
