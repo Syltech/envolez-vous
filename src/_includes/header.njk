@@ -1,0 +1,17 @@
+<!--ENTETE-->
+<header>
+    <a
+    id="fb"
+    class="facebook"
+    target="blank"
+    href="<%= htmlWebpackPlugin.options.data.adresseFacebook %>"
+    >
+        <img src="images/icons/fb.svg" alt=""/>
+    </a>
+    <div id="logo">
+        <img src="images/uploads/logo.svg"/>
+    </div>
+    <div id="date">
+        <p>{{ dates.dateCourse | readableDate}}</p>
+    </div>
+</header>

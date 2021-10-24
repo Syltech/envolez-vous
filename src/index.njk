@@ -3,23 +3,7 @@ layout: layout/main.njk
 permalink: /
 ---
 
-<!--ENTETE-->
-<header>
-  <a
-        id="fb"
-        class="facebook"
-        target="blank"
-        href="<%= htmlWebpackPlugin.options.data.adresseFacebook %>"
-        ><img src="img/fb.svg" alt=""
-/></a>
-  <div id="logo">
-    <img src="img/logo.svg"/>
-  </div>
-  <div id="date">
-    <p>{{ dates.dateCourse | readableDate}}</p>
-  </div>
-  <!-- <p id="date"></p> -->
-</header>
+{% include 'header.njk' %}
 
 <!-- BARRE DE NAVIGATION -->
 <div id="navbar">

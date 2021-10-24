@@ -1,0 +1,726 @@
+@import 'colors';
+@import 'timeline';
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  width: 100%;
+  font-size: 60px;
+  font-family: 'Kanit', sans-serif;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 0px;
+}
+
+.light {
+  background-image: url('../images/kindajean.png');
+  background-attachment: fixed;
+  background-position: center;
+  color: black;
+}
+
+.dark {
+  background-image: url('../images/dark-triangles.png');
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+
+.bouton {
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.bt-dark {
+  background-color: $grey;
+  color: white;
+
+  &:hover {
+    background: $vert;
+    color: black;
+  }
+
+  &:hover a {
+    color: black;
+  }
+}
+
+.bt-dark-envol {
+  background-color: $grey;
+  color: white;
+
+  &:hover {
+    background: $rose;
+  }
+}
+
+.bt-external {
+  a {
+    padding-right: 5px;
+  }
+}
+
+.bouton svg {
+  margin-right: 5px;
+}
+
+/*HEADER*******************************************************************/
+
+@keyframes fly {
+  from {
+    top: 2vh;
+  }
+
+  to {
+    top: 0vh;
+  }
+}
+
+@keyframes fly_logo {
+  from {
+    top: -20px;
+  }
+
+  to {
+    top: -30px;
+  }
+}
+
+header {
+  background-image: url('../images/uploads/header.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: local;
+  height: 500px;
+
+  #fb {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    transform: rotate(10deg);
+    z-index: 200;
+
+    img {
+      width: 50px;
+    }
+
+    &.top-corner {
+      display: none;
+      top: 40px;
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  #instagram {
+    position: fixed;
+    right: 10px;
+    top: 55px;
+    transform: rotate(-15deg);
+    z-index: 150;
+
+    img {
+      width: 50px;
+    }
+
+    &.top-corner {
+      display: none;
+      top: 40px;
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  #logo {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  #logo img {
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.8));
+    width: 50vw;
+    max-height: 200px;
+  }
+
+  p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 5vw;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #montgolfiere {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+
+    background-image: url('../images/montgolfiere.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0%;
+    left: 50%;
+    margin-left: -250px;
+
+    animation-duration: 2s;
+    animation-name: fly;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  #date {
+    display: flex;
+    justify-content: center;
+
+    p {
+      background: rgba(0, 0, 0, 0.8);
+      padding-left: 2vw;
+      padding-right: 2vw;
+      border-radius: 2vw;
+    }
+  }
+}
+
+/*NAVBAR*******************************************************************/
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* align horizontal */
+
+  .facebook {
+    display: none;
+    padding: 0px;
+    padding-top: 5px;
+    img {
+      width: 40px;
+    }
+  }
+
+  &.sticky .facebook {
+    display: block;
+  }
+
+  .instagram {
+    display: none;
+    padding: 0px;
+    padding-top: 5px;
+    img {
+      width: 40px;
+    }
+  }
+
+  &.sticky .instagram {
+    display: block;
+  }
+}
+
+.pdf svg {
+  margin-right: 5px;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#navbar a:hover,
+#navbar .active {
+  background: #555;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px -8px 10px 10px black;
+
+  .facebook {
+    display: block;
+  }
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*COUNTDOWN****************************************************************/
+#inscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; /* align horizontal */
+  padding-top: 20px;
+}
+
+.attention {
+  color: red;
+  text-align: center;
+  margin-top: 0px;
+  p {
+    margin: 0px;
+  }
+  margin-bottom: 20px;
+}
+
+#clock {
+  margin-top: 40px;
+  width: initial;
+}
+
+#covid {
+  padding: 1em;
+  text-align: center;
+  background: white;
+
+  p {
+    margin: 0px;
+  }
+
+  .title {
+    font-size: larger;
+    color: red;
+    font-weight: bold;
+  }
+
+  .bouton {
+    margin-top: 1em;
+    display: block;
+  }
+}
+
+#inscrivezvous {
+  @extend .bouton;
+  @extend .bt-dark;
+  font-family: 'Kanit', sans-serif;
+  background-color: $rose;
+  font-size: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#benefices {
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+#infos_dossards {
+  text-align: center;
+  font-weight: bold;
+  background: $vert;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 90vw;
+  margin-bottom: 20px;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+/*ASSOCIATIONS*************************************************************/
+#associations,
+#enfants,
+#montgolfiere_details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+#associations {
+  box-shadow: 0px 10px 10px -5px black inset;
+}
+
+.colonne {
+  display: table;
+  max-width: 500px;
+
+  .logo {
+    display: table-cell;
+    float: left;
+    padding-right: 20px;
+  }
+
+  .texte {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: justify;
+    color: $grey;
+  }
+}
+
+/*PARCOURS*****************************************************************/
+#parcours {
+  background-image: url('../images/topography.png');
+  color: $grey;
+
+  #description .distances {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .infosGenerales {
+    width: 100%;
+    text-align: center;
+  }
+
+  .circuits {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .circuit {
+    width: 350px;
+    margin-top: 30px;
+  }
+
+  .pousseur {
+    max-width: 350px;
+    text-align: center;
+    background: white;
+    padding: 1em;
+    .code {
+      background: white;
+      border-radius: 3px;
+      padding: 3px 6px 3px 6px;
+      font-weight: bold;
+    }
+  }
+
+  .distance {
+    font-size: 70px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 900;
+    border-radius: 5px 20px 5px;
+    padding-bottom: 10px;
+    background-color: $vert;
+    background-image: url('../images/topography.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    color: black;
+    background-blend-mode: multiply;
+    margin-left: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 0px;
+    float: left;
+  }
+
+  .distance:after {
+    content: 'km';
+    font-size: 30px;
+    padding-left: 5px;
+  }
+
+  .depart {
+    padding-top: 0px;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+    .heure {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .tarif {
+      margin: 0px;
+      padding: 0px;
+    }
+    .hausse {
+      font-size: 12px;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  .informations {
+    text-align: center;
+  }
+
+  .handicourses {
+    margin-top: 30px;
+    text-align: justify;
+
+    .logo {
+      font-size: 50px;
+      float: left;
+      margin-right: 20px;
+    }
+  }
+
+  #enfants .texte p:first-of-type {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #montgolfiere_details .texte p:first-of-type {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #montgolfiere_details {
+    .logo {
+      width: 150px;
+      position: relative;
+
+      img {
+        left: 25px;
+        position: absolute;
+        animation-duration: 2s;
+        animation-name: fly_logo;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    .texte {
+      margin-left: 150px;
+    }
+  }
+
+  #montgolfiere_details .logo {
+  }
+
+  #montgolfiere_details .logo img {
+  }
+}
+
+/*PROGRAMME****************************************************************/
+#programme {
+  background-image: url('../images/stressed_linen.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  box-shadow: 0px 10px 10px -5px black inset;
+  padding-bottom: 40px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h2 {
+    color: white;
+  }
+}
+
+/*SPONSORS*****************************************************************/
+#sponsors {
+  background-image: url('../images/confectionary.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top: 15px;
+  padding-bottom: 30px;
+
+  .ligne {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-height: 125px;
+    }
+
+    a {
+      padding: 15px 20px 0px 20px;
+    }
+
+    a:first-of-type {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    a:last-of-type {
+      padding-right: 0px;
+    }
+
+    #decathlon {
+      max-width: 90%;
+      height: auto;
+    }
+
+    &.derniere {
+      a {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      img {
+        height: 100px;
+      }
+    }
+  }
+}
+
+/*CONTACT*****************************************************************/
+#contact {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  span {
+    min-width: 15%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 200px;
+  }
+
+  header #logo {
+    padding-top: 50px;
+  }
+
+  header p {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  header #fb img {
+    width: 30px;
+  }
+
+  header #instagram {
+    top: 37px;
+    img {
+      width: 30px;
+    }
+  }
+
+  .colonne {
+    display: initial;
+    padding-bottom: 40px;
+  }
+
+  .colonne .logo {
+    display: initial;
+    width: 100%;
+    padding-right: 0px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  #navbar {
+    font-size: 15px;
+
+    a {
+      padding: 10px 5px 10px 5px;
+    }
+
+    .facebook {
+      display: none;
+      padding: 0px;
+      padding-top: 7px;
+      img {
+        width: 25px;
+      }
+    }
+  }
+
+  #inscrivezvous {
+    margin-top: 0px;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  // #benefices {
+  //   margin-bottom: 20px;
+  //   font-size: 15px;
+  // }
+
+  #clock {
+    display: none;
+  }
+
+  #parcours #description {
+    width: 100%;
+  }
+
+  #associations .texte {
+    text-align: center;
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  #parcours .general {
+    font-size: 50px;
+  }
+
+  #sponsors .ligne a {
+    padding: 15px 5px 0px 5px;
+  }
+
+  .ligne a img {
+    zoom: 50%;
+    max-height: 110px;
+  }
+
+  #sponsors .ligne.derniere a {
+    padding-left: 2px;
+    padding-right: 2px;
+
+    img {
+      max-height: 90px;
+      zoom: 45%;
+    }
+  }
+}
