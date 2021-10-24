@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return moment(dateObj).format("DD/MM/YYYY");
   });
+  eleventyConfig.addFilter("displayPhoneNumber", (phoneNumber) => {
+    return phoneNumber.replace(/[^\d]/g, "").match(/.{2}/g).join(" ");
+  });
   return {
     dir: {
       input: "src",

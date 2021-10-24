@@ -1,0 +1,40 @@
+<section id="associations" class="dark">
+    <div class="colonne">
+        <div class="logo">
+            <img src="{{associations.marc.logo}}" alt=""/>
+        </div>
+        <div class="texte">
+            <p>
+                {{ associations.marc.description }}
+            </p>
+            <span class="bouton bt-dark bt-external"
+            >
+                <a href="{{associations.marc.url}}" target="blank"
+              >Découvrir l'association</a
+            >
+                <i class="fas fa-external-link-square-alt"></i
+          >
+            </span>
+        </div>
+    </div>
+    <div class="colonne">
+        <div class="logo">
+            <img src="{{associations.beneficiaire.logo}}" alt=""/>
+        </div>
+        <div class="texte">
+            <p>
+                {{ associations.beneficiaire.description }}
+            </p>
+            <span class="bouton bt-dark-envol bt-external"
+            >
+                <a
+              href="{{associations.beneficiaire.url}}"
+              target="blank"
+              >Découvrir l'association</a
+            >
+                <i class="fas fa-external-link-square-alt"></i
+          >
+            </span>
+        </div>
+    </div>
+</section>

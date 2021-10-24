@@ -1,0 +1,32 @@
+<div class="circuit">
+    <div class="distance">{{circuit.distance}}</div>
+    <div class="depart">
+        <p class="heure">
+            <i class="far fa-clock" aria-hidden="true"></i>
+                     11h00
+                </p>
+        <p class="tarif">{{circuit.tarif}} &euro;</p>
+        {% if dates.dateAugmentation %}
+            <p class="hausse">
+                        +{{circuit.augmentation}} &euro; à partir du
+                        <span class="reduction">{{ dates.dateAugmentation | readableDate }}</span>
+            </p>
+        {% endif %}
+    </div>
+
+    <iframe
+            width="350px"
+            height="610px"
+            src="{{circuit.openrunner}}"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+    <div class="informations">
+        {{circuit.ravitaillement}}
+    </div>
+    <div class="handicourses">
+        <div class="logo fab fa-accessible-icon" aria-hidden="true"></div>
+        <p>Cette course propose un classement handisport</p>
+    </div>
+</div>

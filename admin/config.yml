@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: master 
+local_backend: true
+locale: fr
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
 collections:
@@ -13,13 +15,9 @@ collections:
         name: "dates"
         file: "src/_data/dates.yaml"
         fields:
-          - label: "Date/heure départ de la course"
-            name: "dateCourse"
-            widget: "datetime"
-            default: ""
-            date_format: "DD/MM/YYYY"
-            tile_format: "HH:mm"
           - label: "Date de l'augmentation"
+            required: false
+            hint: "Si vide, alors pas d'augmentation"
             name: "dateAugmentation"
             widget: "date"
             default: ""
@@ -29,7 +27,13 @@ collections:
             widget: "date"
             default: ""
             date_format: "DD/MM/YYYY"
-      - label: "Réseaux sociaux"
+          - label: "Date/heure départ de la course"
+            name: "dateCourse"
+            widget: "datetime"
+            default: ""
+            date_format: "DD/MM/YYYY"
+            tile_format: "HH:mm"
+      - label: "Contacts"
         name: "socials"
         file: "src/_data/socials.yaml"
         fields: 
@@ -37,5 +41,126 @@ collections:
             name: "facebook"
             widget: "string"
             hint: "Lien vers la page de l'évènement sur Facebook"
-            # pattern: ['/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig', 'Veuillez saisir une URL']
-  
+          - label: "Mail"
+            name: "mail"
+            widget: "string"
+            hint: "Adresse mail du club"
+          - label: "Téléphone"
+            name: "phone"
+            widget: "string"
+            hint: "Numéro de téléphone du club"
+  - label: "Course"
+    name: "course"
+    editor:
+      preview: false
+    files: 
+      - label: "Liens"
+        name: "liens"
+        file: "src/_data/course/liens.yaml"
+        fields: 
+          - label: "Lien Inscription"
+            name: "inscription"
+            widget: "string"
+            hint: "Lien vers la page d'inscription"
+      - label: "Parcours court"
+        name: "court"
+        file: "src/_data/course/court.yaml"
+        fields: 
+          - label: "Distance"
+            name: "distance"
+            widget: "number"
+            value_type: "int"
+            min: 0
+          - label: "Parcours OpenRunner"
+            name: "openrunner"
+            widget: "string"
+            hint: "Uniquement le lien"
+          - label: "Tarif (en euros)"
+            name: "tarif"
+            widget: "number"
+            value_type: "int"
+            min: 0
+          - label: "Augmentation (en euros ajoutés)"
+            name: "augmentation"
+            required: false
+            widget: "number"
+            value_type: "int"
+            min: 0
+          - label: "Ravitaillement"
+            name: "ravitaillement"
+            widget: "string"
+            required: false
+      - label: "Parcours long"
+        name: "long"
+        file: "src/_data/course/long.yaml"
+        fields: 
+          - label: "Distance"
+            name: "distance"
+            widget: "number"
+            value_type: "int"
+            min: 0
+          - label: "Parcours OpenRunner"
+            name: "openrunner"
+            widget: "string"
+            hint: "Uniquement le lien"
+          - label: "Tarif (en euros)"
+            name: "tarif"
+            widget: "number"
+            value_type: "int"
+            min: 0
+          - label: "Augmentation (en euros ajoutés)"
+            name: "augmentation"
+            required: false
+            widget: "number"
+            value_type: "int"
+            min: 0
+          - label: "Ravitaillement"
+            name: "ravitaillement"
+            widget: "string"
+            required: false
+      - label: "Pousseurs"
+        name: "pousseurs"
+        file: "src/_data/course/pousseurs.yaml"
+        fields: 
+          - label: "Réduction pousseurs"
+            name: "reductionEnabled"
+            widget: "boolean"
+          - label: "Code promo"
+            name: "coupon"
+            widget: "string"
+
+  - label: "Associations"
+    name: "associations"
+    editor:
+      preview: false
+    files:
+      - label: "MARC"
+        name: "marc"
+        file: "src/_data/associations/marc.yaml"
+        fields:
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+          - label: "Lien vers le site de l'association"
+            name: "url"
+            widget: "string"
+      - label: "Bénéficiaire"
+        name: "beneficiaire"
+        file: "src/_data/associations/beneficiaire.yaml"
+        fields:
+          - label: "Nom"
+            name: "name"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+          - label: "Lien vers le site de l'association"
+            name: "url"
+            widget: "string"
+          

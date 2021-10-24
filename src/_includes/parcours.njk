@@ -1,0 +1,51 @@
+<section id="parcours" class="light">
+    <h2>2 distances</h2>
+    <div class="infosGenerales">
+        Départ et Arrivée au
+        <span class="bouton bt-dark bt-maps"
+          >
+            <a target="blank" href="https://goo.gl/maps/WeByEYbuFtB2"
+            >
+                <i class="fa fa-map-marker-alt"></i>Bassin Jacques C&oelig;ur</a
+          >
+        </span
+        >
+    </div>
+    <div class="circuits">
+        {% set circuit = course.court %}
+        {% include 'circuit.njk' %}
+
+        {% if course.pousseurs.reductionEnabled %}
+            <div class="">
+                <div class="pousseur">
+                    <p>
+              Si vous voulez travailler le haut du corps en même temps que le
+              bas, n'hésitez pas à devenir <strong>Pousseur</strong> durant la
+              course !
+            </p>
+                    <p>Code de réduction : <span class="code">{{course.pousseurs.coupon}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+        {% set circuit = course.long %}
+        {% include 'circuit.njk' %}
+    </div>
+    <div id="enfants">
+        <div class="colonne">
+            <div class="logo">
+                <img src="img/child.svg" width="150px"/>
+            </div>
+            <div class="texte">
+                <p>
+              Des courses sont aussi proposées pour les enfants de 4 à 15 ans
+              avec des cadeaux à l'arrivée à partir de 10h00 autour du bassin
+              Jacques C&oelig;ur!
+            </p>
+                <p></p>
+                <p>(1€ - inscription sur place)</p>
+            </div>
+        </div>
+    </div>
+</section>
