@@ -37,5 +37,5 @@ collections:
             name: "facebook"
             widget: "string"
             hint: "Lien vers la page de l'évènement sur Facebook"
-            pattern: ['/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig']
+            pattern: ['/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig', 'Veuillez saisir une URL']
   
