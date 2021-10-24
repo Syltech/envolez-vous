@@ -19,14 +19,14 @@ h2 {
 }
 
 .light {
-  background-image: url('../images/kindajean.png');
+  background-image: url('../images/backgrounds/kindajean.png');
   background-attachment: fixed;
   background-position: center;
   color: black;
 }
 
 .dark {
-  background-image: url('../images/dark-triangles.png');
+  background-image: url('../images/backgrounds/dark-triangles.png');
   background-attachment: fixed;
   background-position: center;
   color: white;
@@ -170,7 +170,7 @@ header {
     height: 200px;
     position: absolute;
 
-    background-image: url('../images/montgolfiere.png');
+    background-image: url('../images/backgrounds/montgolfiere.png');
     background-size: contain;
     background-repeat: no-repeat;
     top: 0%;
@@ -394,7 +394,7 @@ header {
 
 /*PARCOURS*****************************************************************/
 #parcours {
-  background-image: url('../images/topography.png');
+  background-image: url('../images/backgrounds/topography.png');
   color: $grey;
 
   #description .distances {
@@ -439,7 +439,7 @@ header {
     border-radius: 5px 20px 5px;
     padding-bottom: 10px;
     background-color: $vert;
-    background-image: url('../images/topography.png');
+    background-image: url('../images/backgrounds/topography.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
@@ -540,7 +540,7 @@ header {
 
 /*PROGRAMME****************************************************************/
 #programme {
-  background-image: url('../images/stressed_linen.png');
+  background-image: url('../images/backgrounds/stressed_linen.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
@@ -558,7 +558,7 @@ header {
 
 /*SPONSORS*****************************************************************/
 #sponsors {
-  background-image: url('../images/confectionary.png');
+  background-image: url('../images/backgrounds/confectionary.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
