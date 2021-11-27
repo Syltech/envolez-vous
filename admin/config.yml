@@ -49,14 +49,14 @@ collections:
             name: "phone"
             widget: "string"
             hint: "Numéro de téléphone du club"
-  - label: "Course"
-    name: "course"
+  - label: "Courses"
+    name: "courses"
     editor:
       preview: false
     files: 
       - label: "Liens"
         name: "liens"
-        file: "src/_data/course/liens.yaml"
+        file: "src/_data/courses/liens.yaml"
         fields: 
           - label: "Lien Inscription"
             name: "inscription"
@@ -64,7 +64,7 @@ collections:
             hint: "Lien vers la page d'inscription"
       - label: "Parcours court"
         name: "court"
-        file: "src/_data/course/court.yaml"
+        file: "src/_data/courses/court.yaml"
         fields: 
           - label: "Distance"
             name: "distance"
@@ -86,13 +86,24 @@ collections:
             widget: "number"
             value_type: "int"
             min: 0
-          - label: "Ravitaillement"
-            name: "ravitaillement"
-            widget: "string"
+          - label: "Classement Handisport"
+            name: "handisport"
+            required: true
+            widget: "boolean"
+          - label: "Compléments d'infos"
+            name: "complements"
+            widget: markdown
+            buttons: [
+              "bold",
+              "italic",
+              "link",
+              "bulleted-list"
+            ]
             required: false
+          
       - label: "Parcours long"
         name: "long"
-        file: "src/_data/course/long.yaml"
+        file: "src/_data/courses/long.yaml"
         fields: 
           - label: "Distance"
             name: "distance"
@@ -114,13 +125,23 @@ collections:
             widget: "number"
             value_type: "int"
             min: 0
-          - label: "Ravitaillement"
-            name: "ravitaillement"
-            widget: "string"
+          - label: "Classement Handisport"
+            name: "handisport"
+            required: true
+            widget: "boolean"
+          - label: "Compléments d'infos"
+            name: "complements"
+            widget: markdown
+            buttons: [
+              "bold",
+              "italic",
+              "link",
+              "bulleted-list"
+            ]
             required: false
       - label: "Pousseurs"
         name: "pousseurs"
-        file: "src/_data/course/pousseurs.yaml"
+        file: "src/_data/courses/pousseurs.yaml"
         fields: 
           - label: "Réduction pousseurs"
             name: "reductionEnabled"
@@ -128,6 +149,20 @@ collections:
           - label: "Code promo"
             name: "coupon"
             widget: "string"
+      - label: "Enfants"
+        name: "enfants"
+        file: "src/_data/courses/enfants.yaml"
+        fields: 
+          - label: "Informations"
+            name: "informations"
+            widget: markdown
+            buttons: [
+              "bold",
+              "italic",
+              "link",
+              "bulleted-list"
+            ]
+            required: true
 
   - label: "Associations"
     name: "associations"
@@ -163,4 +198,40 @@ collections:
           - label: "Lien vers le site de l'association"
             name: "url"
             widget: "string"
-          
+  
+  - label: "Programme"
+    name: "programme"
+    editor: 
+      preview: false
+    files: 
+      - file: "src/_data/programme.yaml"
+        label: Evènements
+        name: evenements
+        fields:
+          - label: Evènements
+            name: evenements
+            summary :  '{{fields.datetime}} - {{fields.informations}}'
+            widget: list
+            hint: "L'ordre affiché ici correspond à l'affichage sur le site !"
+            fields: 
+              - label: Date et heure
+                hint: au format JJ/MM/AAAA HH:mm
+                name: "datetime"
+                widget: "string"
+                pattern: ['\d{2}/\d{2}/\d{4} \d{2}:\d{2}', "Vérifier le format"]
+              - label: "Informations"
+                name: "informations"
+                widget: markdown
+                buttons: [
+                  "bold",
+                  "italic",
+                  "link"
+                ]
+                required: true
+              - label: Type d'activité
+                name: "type"
+                widget: "select"
+                options: 
+                  - {label: "MARC", value: "right"}
+                  - {label: "Partenaire", value: "left"}
+                hint: Change la couleur de la pastille, vert pour MARC, rose pour le partenaire

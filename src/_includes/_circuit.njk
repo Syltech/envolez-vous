@@ -23,10 +23,12 @@
           ></iframe>
 
     <div class="informations">
-        {{circuit.ravitaillement}}
+        {{ circuit.complements | mdToHtml | safe }}
     </div>
-    <div class="handicourses">
-        <div class="logo fab fa-accessible-icon" aria-hidden="true"></div>
-        <p>Cette course propose un classement handisport</p>
-    </div>
+    {% if circuit.handisport %}
+        <div class="handicourses">
+            <div class="logo fab fa-accessible-icon" aria-hidden="true"></div>
+            <p>Cette course propose un classement handisport</p>
+        </div>
+    {% endif %}
 </div>

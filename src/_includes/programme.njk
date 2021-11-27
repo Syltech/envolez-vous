@@ -1,0 +1,15 @@
+<section id="programme">
+    <h2>Programme</h2>
+    <div class="timeline">
+        {% for evenement in programme.evenements %}
+            <div class="container {{evenement.type}}">
+                <div class="content">
+                    <h3>
+                        {{ evenement.datetime}}
+                    </h3>
+                    {{evenement.informations | mdToHtml | safe}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

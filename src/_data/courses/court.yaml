@@ -2,4 +2,5 @@ distance: 5
 openrunner: https://www.openrunner.com/route/9254249/embed/fr/6b51694d666f4f6a325855457857504e6c506d787337423057796c6354724a6e665637634d7948744f7a633d3a3aaec3270a8c08e7bf49751c40b4b8b726
 tarif: 8
 augmentation: 2
-ravitaillement: Ravitaillement à l'arrivée
+handisport: true
+complements: Ravitaillement à l'arrivée.

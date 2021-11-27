@@ -1,5 +1,7 @@
 const yaml = require("js-yaml");
 const moment = require("moment");
+const showdown = require("showdown");
+const converter = new showdown.Converter({ metadate: true });
 moment.locale("fr");
 
 module.exports = function (eleventyConfig) {
@@ -11,6 +13,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return moment(dateObj).format("DD/MM/YYYY");
+  });
+  eleventyConfig.addFilter("mdToHtml", (md) => {
+    return converter.makeHtml(md);
   });
   eleventyConfig.addFilter("displayPhoneNumber", (phoneNumber) => {
     return phoneNumber.replace(/[^\d]/g, "").match(/.{2}/g).join(" ");
