@@ -74,5 +74,21 @@
 />
         </noscript>
         <!-- End Facebook Pixel Code -->
+        <script src="vendors/masonry.pkgd.min.js"></script>
+        <script src="vendors/imagesloaded.pkgd.min.js"></script>
+        <script>
+            var grid = document.querySelector('.grid');
+            var msnry;
+
+            imagesLoaded(grid, function () {
+                // init Isotope after all images have loaded
+                msnry = new Masonry(grid, {
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-sizer',
+                    gutter: 10,
+                    fitWidth: true
+                });
+            });
+        </script>
     </body>
 </html>
