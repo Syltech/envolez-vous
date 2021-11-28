@@ -1,7 +1,14 @@
 <section id="sponsors">
     <div class="grid">
         <div class="grid-sizer"></div>
-        <a class="grid-item important" href="http://www.montpellier3m.fr/" target="blank">
+        {% for sponsor in sponsors.sponsors %}
+
+            <a class="grid-item {{sponsor.importance}}" href="{{sponsor.lien}}" alt="{{sponsor.nom}}" target="blank">
+                <img src="{{sponsor.image}}" alt="{{sponsor.nom}}">
+            </a>
+
+        {% endfor %}
+        {# <a class="grid-item important" href="http://www.montpellier3m.fr/" target="blank">
             <img src="images/sponsors/mmm.png" alt=""/>
         </a>
         <a class="grid-item" href="http://www.montpellier.fr/" target="blank"
@@ -70,7 +77,7 @@
 /></a>
         <a class="grid-item" href="https://www.francebleu.fr/herault" target="blank"
           ><img src="images/sponsors/fb-herault.jpg" alt=""
-/></a>
+/></a> #}
 
         <!-- <a class="grid-item" href="https://www.facebook.com/NightRunMontpellier/" target="blank"><img src="images/sponsors/night_run.png" alt=""></a> -->
         <!-- <a class="grid-item" href="http://club.quomodo.com/runningsensation" target="blank"><img src="images/sponsors/running_sensation.jpg" alt=""></a> -->

@@ -3,7 +3,7 @@ backend:
   branch: master 
 local_backend: true
 locale: fr
-media_folder: "_site/images/uploads"
+media_folder: "/images/uploads"
 public_folder: "/images/uploads"
 collections:
   - label: "Configuration"
@@ -235,3 +235,43 @@ collections:
                   - {label: "MARC", value: "right"}
                   - {label: "Partenaire", value: "left"}
                 hint: Change la couleur de la pastille, vert pour MARC, rose pour le partenaire
+  
+  - label: "Sponsors"
+    name: "sponsors"
+    editor: 
+      preview: false
+    files: 
+      - file: "src/_data/sponsors.yaml"
+        label: Gestion des sponsors
+        name: sponsors
+        fields:
+          - label: Sponsors
+            name: sponsors
+            summary : '{{fields.nom}}'
+            widget: list
+            
+            fields: 
+              - label: Nom du sponsor
+                name: "nom"
+                widget: "string"
+              - label: Lien
+                name: lien
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+                choose_url: false
+                media_library:
+                  config:
+                    multiple: false
+              - label: Importance
+                hint: Fera apparaître le logo plus grand
+                widget: "select"
+                name: importance
+                default: ''
+                required: false
+                options: 
+                  - {label: normal, value: 'normal'}
+                  - {label: important, value: 'important'}
+                  - {label: très important, value: 'very-important'}
+                  

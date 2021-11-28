@@ -1,0 +1,17 @@
+sponsors:
+  - nom: Montpellier Métropole Méditerranée
+    lien: http://www.montpellier3m.fr/
+    image: /images/uploads/image_2021-11-27_200740.png
+    importance: important
+  - importance: important
+    image: /images/uploads/image_2021-11-27_200753.png
+    nom: Ville de Montpellier
+    lien: http://www.montpellier3m.fr/
+  - importance: important
+    nom: Ville de Lattes
+    image: /images/uploads/image_2021-11-27_201157.png
+    lien: http://www.ville-lattes.fr/
+  - importance: normal
+    nom: Hérault Sport
+    image: /images/uploads/image_2021-11-27_201225.png
+    lien: http://www.heraultsport.fr/
