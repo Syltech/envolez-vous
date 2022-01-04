@@ -11,6 +11,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("vendors");
+  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("fonts");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return moment(dateObj).format("DD/MM/YYYY");

@@ -11,6 +11,34 @@ collections:
     editor:
       preview: false
     files:
+      - label: "Inscription/resultats"
+        name: "inscription"
+        file: "src/_data/inscription.yaml"
+        fields:
+          - label: "Lien Inscription"
+            name: "lien"
+            widget: "string"
+            hint: "Lien vers la page d'inscription"
+          - label: "Inscriptions activées"
+            name: "actives"
+            widget: "boolean"
+          - label: "Fichier des résultats (en un seul .pdf)"
+            required: false
+            hint: "Si un fichier est fourni ici, remplace le bouton 'inscription'"
+            name: "resultats"
+            widget: "file"
+          - label: "Informations complémentaires"
+            hint: "Pour passer des informations en plus sous le bouton d'inscription / résultat"
+            name: "informations"
+            required: false
+            widget: markdown
+            buttons: [
+              "bold",
+              "italic",
+              "link",
+              "bulleted-list"
+            ]
+
       - label: "Dates"
         name: "dates"
         file: "src/_data/dates.yaml"
@@ -32,7 +60,16 @@ collections:
             widget: "datetime"
             default: ""
             date_format: "DD/MM/YYYY"
-            tile_format: "HH:mm"
+            time_format: "HH:mm"
+      - label: "Règlement"
+        name: "reglement"
+        file: "src/_data/reglement.yaml"
+        fields:
+          - label: "Fichier du règlement (en .pdf)"
+            required: false
+            name: "file"
+            widget: "file"
+
       - label: "Contacts"
         name: "socials"
         file: "src/_data/socials.yaml"
@@ -54,14 +91,6 @@ collections:
     editor:
       preview: false
     files: 
-      - label: "Liens"
-        name: "liens"
-        file: "src/_data/courses/liens.yaml"
-        fields: 
-          - label: "Lien Inscription"
-            name: "inscription"
-            widget: "string"
-            hint: "Lien vers la page d'inscription"
       - label: "Parcours court"
         name: "court"
         file: "src/_data/courses/court.yaml"

@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'timeline';
+// @import 'font-awesome.min';
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -165,25 +166,6 @@ header {
     margin: 0px;
   }
 
-  #montgolfiere {
-    width: 100px;
-    height: 200px;
-    position: absolute;
-
-    background-image: url('../images/backgrounds/montgolfiere.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    top: 0%;
-    left: 50%;
-    margin-left: -250px;
-
-    animation-duration: 2s;
-    animation-name: fly;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-  }
-
   #date {
     display: flex;
     justify-content: center;
@@ -288,6 +270,17 @@ header {
   padding-top: 20px;
 }
 
+.complementaire {
+  margin-bottom: 20px;
+}
+
+.complementaire a {
+  @extend .bouton;
+  @extend .bt-dark;
+  text-decoration: none;
+  color: white;
+}
+
 .attention {
   color: red;
   text-align: center;
@@ -335,6 +328,15 @@ header {
   margin-top: 40px;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+#inscrivezvous.inactif {
+  background-color: #555;
+  cursor: not-allowed;
+
+  &:hover {
+    color: white !important;
+  }
 }
 
 #benefices {

@@ -1,4 +1,4 @@
-<div id="inscription" class="light">
+<section id="inscription" class="light">
   {# <div id="covid">
         <p class="title">COVID-19</p>
         <p>On fait tout ce qu'il faut pour que vous soyez en sécurité</p>
@@ -15,36 +15,51 @@
         >
         </span> 
     </div> #}
-  <div id="clock"></div>
-  <div id="inscrivezvous">
-    <a
+  {# <div id="clock"></div> #}
+  {% if inscription.resultats %}
+    <div id="inscrivezvous">
+      <a
           id="raceresultLink"
           target="blank"
-          href="{{course.liens.inscription}}"
+          href="{{inscription.resultats}}"
+          >Résultats</a
+        >
+    </div>
+
+    {% else%}
+
+    {% if inscription.actives %}
+      <div id="inscrivezvous">
+        <a
+          id="raceresultLink"
+          target="blank"
+          href="{{inscription.lien}}"
           >Inscrivez-vous !</a
         >
-  </div>
-  <div id="benefices">
-        Course caritative au bénéfice de l'association EnVol
       </div>
+    {% else %}
+      <div id="inscrivezvous" class="inactif" >
+        <a
+          id="raceresultLink"
+          >Inscriptions closes</a
+        >
+      </div>
+    {% endif %}
+  {% endif %}
+  <div id="benefices">
+        Course caritative au bénéfice de l'association {{associations.beneficiaire.name}}
+  </div>
   <div class="attention">
     <p>
-          Un certificat médical de moins de un an ou une licence FFA sont
-          nécessaires au moment de l'inscription
-        </p>
-    {# <p>
-          Clôture des inscriptions le <%=
-          htmlWebpackPlugin.options.data.clotureInscription.court %>.
-        </p>
-        <p>Pas d'inscription sur place (pour cause sanitaire)</p> #}
+        Un certificat médical de moins de un an ou une licence FFA sont
+        nécessaires au moment de l'inscription
+      </p>
+    {# <p>Pas d'inscription sur place (pour cause sanitaire)</p> #}
   </div>
 
-  {# <div id="infos_dossards">
-        Retraits de dossards exclusivement à
-        <a href="https://foulees.com/-montpellier-"
-          >Foulées <i class="fas fa-external-link-square-alt"></i
-        >
-        </a>
-        de 14h à 19h le <%= htmlWebpackPlugin.options.data.dateRetrait.court %>.
-      </div> #}
-</div>
+  {% if inscription.informations %}
+    <div class="complementaire">
+      {{inscription.informations  | mdToHtml | safe}}
+    </div>
+  {% endif %}
+</section>
