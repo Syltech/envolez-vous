@@ -1,5 +1,5 @@
 <section id="parcours" class="light">
-    <h2>2 distances</h2>
+    <h2>{{parcours | length}} parcours</h2>
     <div class="infosGenerales">
         Départ et Arrivée au
         <span class="bouton bt-dark bt-maps"
@@ -12,28 +12,14 @@
         >
     </div>
     <div class="circuits">
-        {% set circuit = courses.court %}
-        {% include '_circuit.njk' %}
+        {% for name, circuit in parcours %}
+            {% include '_circuit.njk' %}
 
-        {% if courses.pousseurs.reductionEnabled %}
-            <div class="">
-                <div class="pousseur">
-                    <p>
-              Si vous voulez travailler le haut du corps en même temps que le
-              bas, n'hésitez pas à devenir <strong>Pousseur</strong> durant la
-              course !
-            </p>
-                    <p>Code de réduction : <span class="code">{{courses.pousseurs.coupon}}
-                        </span>
-                    </p>
-                </div>
-            </div>
-        {% endif %}
-        {% set circuit = courses.long %}
-        {% include '_circuit.njk' %}
+        {% endfor %}
+
     </div>
     <div id="enfants">
-        <div class="colonne">
+        <div class="colonne">`
             <div class="logo">
                 <img src="images/child.svg" width="150px"/>
             </div>

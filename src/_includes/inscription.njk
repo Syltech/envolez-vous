@@ -57,6 +57,21 @@
     {# <p>Pas d'inscription sur place (pour cause sanitaire)</p> #}
   </div>
 
+  {# {% if courses.pousseurs.reductionEnabled %}
+    <div class="">
+      <div class="pousseur">
+        <p>
+              Si vous voulez travailler le haut du corps en même temps que le
+              bas, n'hésitez pas à devenir <strong>Pousseur</strong> durant la
+              course !
+            </p>
+        <p>Code de réduction : <span class="code">{{courses.pousseurs.coupon}}
+          </span>
+        </p>
+      </div>
+    </div>
+  {% endif %} #}
+
   {% if inscription.informations %}
     <div class="complementaire">
       {{inscription.informations  | mdToHtml | safe}}

@@ -6,6 +6,63 @@ locale: fr
 media_folder: "/images/uploads"
 public_folder: "/images/uploads"
 collections:
+  - label: "Parcours"
+    name: "parcours"
+    folder: "src/_data/parcours"
+    create: true
+    editor:
+      preview: false
+    identifier_field: nom
+    format: yaml
+    extension: yaml
+    fields: 
+      - label: "Nom"
+        name: "nom"
+        widget: "string"
+      - label: "Distance"
+        name: "distance"
+        widget: "number"
+        value_type: "int"
+        min: 0
+      - label: "Spécialité"
+        name: "specialite"
+        widget: "string"
+        hint: "Laisser vide si 'Course', sinon marquer 'Marche'"
+        required: false
+      - label: Heure du départ
+        hint: HH:mm
+        name: "depart"
+        widget: "string"
+        pattern: ['\d{2}:\d{2}', "Vérifier le format"]
+      - label: "Parcours OpenRunner"
+        name: "openrunner"
+        widget: "string"
+        hint: "Uniquement le lien"
+      - label: "Tarif (en euros)"
+        name: "tarif"
+        widget: "number"
+        value_type: "int"
+        min: 0
+      - label: "Augmentation (en euros ajoutés)"
+        name: "augmentation"
+        required: false
+        widget: "number"
+        value_type: "int"
+        min: 0
+      - label: "Classement Handisport"
+        name: "handisport"
+        required: true
+        widget: "boolean"
+      - label: "Compléments d'infos"
+        name: "complements"
+        widget: markdown
+        buttons: [
+          "bold",
+          "italic",
+          "link",
+          "bulleted-list"
+        ]
+        required: false
   - label: "Configuration"
     name: "configuration"
     editor:
@@ -91,83 +148,7 @@ collections:
     editor:
       preview: false
     files: 
-      - label: "Parcours court"
-        name: "court"
-        file: "src/_data/courses/court.yaml"
-        fields: 
-          - label: "Distance"
-            name: "distance"
-            widget: "number"
-            value_type: "int"
-            min: 0
-          - label: "Parcours OpenRunner"
-            name: "openrunner"
-            widget: "string"
-            hint: "Uniquement le lien"
-          - label: "Tarif (en euros)"
-            name: "tarif"
-            widget: "number"
-            value_type: "int"
-            min: 0
-          - label: "Augmentation (en euros ajoutés)"
-            name: "augmentation"
-            required: false
-            widget: "number"
-            value_type: "int"
-            min: 0
-          - label: "Classement Handisport"
-            name: "handisport"
-            required: true
-            widget: "boolean"
-          - label: "Compléments d'infos"
-            name: "complements"
-            widget: markdown
-            buttons: [
-              "bold",
-              "italic",
-              "link",
-              "bulleted-list"
-            ]
-            required: false
-          
-      - label: "Parcours long"
-        name: "long"
-        file: "src/_data/courses/long.yaml"
-        fields: 
-          - label: "Distance"
-            name: "distance"
-            widget: "number"
-            value_type: "int"
-            min: 0
-          - label: "Parcours OpenRunner"
-            name: "openrunner"
-            widget: "string"
-            hint: "Uniquement le lien"
-          - label: "Tarif (en euros)"
-            name: "tarif"
-            widget: "number"
-            value_type: "int"
-            min: 0
-          - label: "Augmentation (en euros ajoutés)"
-            name: "augmentation"
-            required: false
-            widget: "number"
-            value_type: "int"
-            min: 0
-          - label: "Classement Handisport"
-            name: "handisport"
-            required: true
-            widget: "boolean"
-          - label: "Compléments d'infos"
-            name: "complements"
-            widget: markdown
-            buttons: [
-              "bold",
-              "italic",
-              "link",
-              "bulleted-list"
-            ]
-            required: false
+      
       - label: "Pousseurs"
         name: "pousseurs"
         file: "src/_data/courses/pousseurs.yaml"

@@ -1,10 +1,19 @@
 <div class="circuit">
-    <div class="distance">{{circuit.distance}}</div>
+    <div class="distance">
+        <div class="div">
+            {{circuit.distance}}
+            <span class="unite">km</span>
+        </div>
+        {% if circuit.specialite %}
+            <div class="complement">{{ circuit.specialite }}</div>
+        {% endif %}
+    </div>
     <div class="depart">
         <p class="heure">
             <i class="far fa-clock" aria-hidden="true"></i>
-                     11h00
-                </p>
+            {{circuit.depart}}
+
+        </p>
         <p class="tarif">{{circuit.tarif}} &euro;</p>
         {% if dates.dateAugmentation %}
             <p class="hausse">

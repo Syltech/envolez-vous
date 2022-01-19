@@ -457,10 +457,15 @@ header {
     float: left;
   }
 
-  .distance:after {
-    content: 'km';
-    font-size: 30px;
-    padding-left: 5px;
+  .distance .unite {
+    font-size: 25px;
+    margin-left: -11px;
+  }
+
+  .distance .complement {
+    font-size: 20px;
+    margin-top: -25px;
+    font-weight: normal;
   }
 
   .depart {

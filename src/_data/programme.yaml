@@ -1,7 +1,10 @@
 evenements:
-  - datetime: 20/11/2021 20:30
-    informations: azeazeaze azeae ae aeaz ezaeaz
+  - datetime: 13/02/2022 10:20
+    informations: Départ course enfants
     type: right
-  - datetime: 20/11/2021 21:30
-    informations: Ceci est un ***autre test***
-    type: left
+  - datetime: 13/02/2022 10:15
+    informations: Départ marche nordique
+    type: right
+  - datetime: 13/02/2022 11:00
+    informations: Départ course 5km et 11km
+    type: right
