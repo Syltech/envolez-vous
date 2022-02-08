@@ -7,10 +7,6 @@ sponsors:
     image: /images/uploads/image_2021-11-27_200753.png
     nom: Ville de Montpellier
     lien: http://www.montpellier.fr/
-  - importance: normal
-    nom: Foulée
-    lien: https://foulees.com/-montpellier-
-    image: /images/uploads/affiche_envolez-vous_2022.png
   - importance: important
     nom: Ville de Lattes
     image: /images/uploads/image_2021-11-27_201157.png
