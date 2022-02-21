@@ -15,3 +15,11 @@ sponsors:
     nom: Hérault Sport
     image: /images/uploads/image_2021-11-27_201225.png
     lien: http://www.heraultsport.fr/
+  - importance: normal
+    nom: Midi Libre
+    lien: https://www.midilibre.fr/
+    image: /images/uploads/midi-libre.jpg
+  - importance: normal
+    nom: Radio Aviva
+    lien: https://www.radio-aviva.com/
+    image: /images/uploads/radio-aviva-logo-rectangle.png
