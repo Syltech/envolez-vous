@@ -2,7 +2,13 @@ nom: 11km
 distance: 11
 depart: 11:00
 openrunner: https://www.openrunner.com/route/14121269/embed/fr/6f652f6c3978435052554b50656d355630696d637367395431386632354634582f495a344f6944425559493d3a3a3bc9af9b8b5dd0bd87431cd530e5f03d
-tarif: 11
+tarif: 12
 augmentation: ""
 handisport: true
-complements: Ravitaillement à mi-parcours (Lattes) et à l'arrivée
+complements: |-
+  T﻿arification : 
+
+  * 12 € inscription en ligne
+  * 1﻿5 € sur place
+
+  Ravitaillement à mi-parcours (Lattes) et à l'arrivée
