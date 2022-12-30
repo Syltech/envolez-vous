@@ -2,7 +2,13 @@ nom: 5km
 distance: 5
 depart: 11:00
 openrunner: https://www.openrunner.com/route/14121268/embed/fr/5a5a67395a766232676336765a752f794a5a772f76654a464b54644369394e316f476c794f61345530656b3d3a3adaee4b285001a85f35900d2d9245ce3a
-tarif: 8
+tarif: 9
 augmentation: ""
 handisport: true
-complements: Ravitaillement uniquement à l'arrivée, prévoyez de quoi vous hydrater 💧
+complements: |-
+  T﻿arification :
+
+  * 9﻿ € : inscription en ligne
+  * 1﻿2 € : inscription sur place
+
+  Ravitaillement uniquement à l'arrivée, prévoyez de quoi vous hydrater 💧
