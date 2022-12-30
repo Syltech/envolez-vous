@@ -1,19 +1,21 @@
 evenements:
-  - datetime: 19/02/2022 10:00
-    informations: Stand place Jean Jaurès - Venez nous rencontrer !
+  - datetime: 26/03/2022 10:00
+    informations: " Clôture des inscriptions le jour de la course à 10h00"
     type: right
-  - datetime: 25/02/2022 23:00
-    informations: " Clôture des inscriptions"
+  - datetime: 25/02/2023 14:00
+    informations: >-
+      Retrait des dossards le 25/02/2023 entre 14h00 et 19h00 au magasin Foulées
+      à Montpellier.
+
+
+      Retrait des dossards le 26/02/2023 de 9h00 à 10h00.
     type: right
-  - datetime: 26/02/2022 14:00
-    informations: Retrait des dossards de 14h à 19h à Foulées (Montpellier)
-    type: right
-  - datetime: 27/02/2022 10:15
-    informations: Départ marche nordique
-    type: right
-  - datetime: 27/02/2022 10:20
+  - datetime: 26/02/2023 10:00
     informations: Départ course enfants
     type: right
-  - datetime: 27/02/2022 11:00
+  - datetime: 26/02/2023 11:00
     informations: Départ course 5km et 11km
+    type: right
+  - datetime: 26/02/2023 10:30
+    informations: D﻿épart des courses adaptées
     type: right
