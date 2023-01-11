@@ -1,8 +1,11 @@
 nom: Courses adaptées
-distance: 0
+distance: 1
 depart: 10:30
 openrunner: <iframe width="100%" height="500"
   src="https://www.openrunner.com/embed/4c7a5750437a554554373448376d54522f74442f765662733246504448756b752f383458694e72786c4a773d3a3a78930947594a40286d9644a3054ce4aa?unit=metric"></iframe>
 tarif: 0
 handisport: false
-complements: C﻿ourses adaptées (hors joëlettes)
+complements: |-
+  C﻿ourses adaptées (hors joëlettes).
+
+  L﻿a distance effectuée et le nombre de tours peut varier selon les courses.
