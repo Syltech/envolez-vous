@@ -1,5 +1,5 @@
 evenements:
-  - datetime: 26/03/2022 10:00
+  - datetime: 25/02/2023 10:00
     informations: " Clôture des inscriptions le jour de la course à 10h00"
     type: right
   - datetime: 25/02/2023 14:00
@@ -8,14 +8,14 @@ evenements:
       à Montpellier.
 
 
-      Retrait des dossards le 26/02/2023 de 9h00 à 10h00.
+      Retrait des dossards le 26/02/2023 de 9h00 à 10h30.
     type: right
   - datetime: 26/02/2023 10:00
     informations: Départ course enfants
     type: right
-  - datetime: 26/02/2023 11:00
-    informations: Départ course 5km et 11km
-    type: right
   - datetime: 26/02/2023 10:30
     informations: D﻿épart des courses adaptées
+    type: right
+  - datetime: 26/02/2023 11:00
+    informations: Départ course 5km et 11km
     type: right
