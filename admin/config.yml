@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master 
+  branch: master
 # local_backend: true
 locale: fr
 media_folder: "/images/uploads"
@@ -15,7 +15,7 @@ collections:
     identifier_field: nom
     format: yaml
     extension: yaml
-    fields: 
+    fields:
       - label: "Nom"
         name: "nom"
         widget: "string"
@@ -56,12 +56,7 @@ collections:
       - label: "Compléments d'infos"
         name: "complements"
         widget: markdown
-        buttons: [
-          "bold",
-          "italic",
-          "link",
-          "bulleted-list"
-        ]
+        buttons: ["bold", "italic", "link", "bulleted-list"]
         required: false
   - label: "Configuration"
     name: "configuration"
@@ -89,12 +84,7 @@ collections:
             name: "informations"
             required: false
             widget: markdown
-            buttons: [
-              "bold",
-              "italic",
-              "link",
-              "bulleted-list"
-            ]
+            buttons: ["bold", "italic", "link", "bulleted-list"]
 
       - label: "Dates"
         name: "dates"
@@ -130,7 +120,7 @@ collections:
       - label: "Contacts"
         name: "socials"
         file: "src/_data/socials.yaml"
-        fields: 
+        fields:
           - label: "Facebook"
             name: "facebook"
             widget: "string"
@@ -141,18 +131,18 @@ collections:
             hint: "Adresse mail du club"
           - label: "Téléphone"
             name: "phone"
+            required: false
             widget: "string"
             hint: "Numéro de téléphone du club"
   - label: "Courses"
     name: "courses"
     editor:
       preview: false
-    files: 
-      
+    files:
       - label: "Pousseurs"
         name: "pousseurs"
         file: "src/_data/courses/pousseurs.yaml"
-        fields: 
+        fields:
           - label: "Réduction pousseurs"
             name: "reductionEnabled"
             widget: "boolean"
@@ -162,16 +152,11 @@ collections:
       - label: "Enfants"
         name: "enfants"
         file: "src/_data/courses/enfants.yaml"
-        fields: 
+        fields:
           - label: "Informations"
             name: "informations"
             widget: markdown
-            buttons: [
-              "bold",
-              "italic",
-              "link",
-              "bulleted-list"
-            ]
+            buttons: ["bold", "italic", "link", "bulleted-list"]
             required: true
 
   - label: "Associations"
@@ -208,22 +193,22 @@ collections:
           - label: "Lien vers le site de l'association"
             name: "url"
             widget: "string"
-  
+
   - label: "Programme"
     name: "programme"
-    editor: 
+    editor:
       preview: false
-    files: 
+    files:
       - file: "src/_data/programme.yaml"
         label: Evènements
         name: evenements
         fields:
           - label: Evènements
             name: evenements
-            summary :  '{{fields.datetime}} - {{fields.informations}}'
+            summary: "{{fields.datetime}} - {{fields.informations}}"
             widget: list
             hint: "L'ordre affiché ici correspond à l'affichage sur le site !"
-            fields: 
+            fields:
               - label: Date et heure
                 hint: au format JJ/MM/AAAA HH:mm
                 name: "datetime"
@@ -232,35 +217,31 @@ collections:
               - label: "Informations"
                 name: "informations"
                 widget: markdown
-                buttons: [
-                  "bold",
-                  "italic",
-                  "link"
-                ]
+                buttons: ["bold", "italic", "link"]
                 required: true
               - label: Type d'activité
                 name: "type"
                 widget: "select"
-                options: 
-                  - {label: "MARC", value: "right"}
-                  - {label: "Partenaire", value: "left"}
+                options:
+                  - { label: "MARC", value: "right" }
+                  - { label: "Partenaire", value: "left" }
                 hint: Change la couleur de la pastille, vert pour MARC, rose pour le partenaire
-  
+
   - label: "Sponsors"
     name: "sponsors"
-    editor: 
+    editor:
       preview: false
-    files: 
+    files:
       - file: "src/_data/sponsors.yaml"
         label: Gestion des sponsors
         name: sponsors
         fields:
           - label: Sponsors
             name: sponsors
-            summary : '{{fields.nom}}'
+            summary: "{{fields.nom}}"
             widget: list
-            
-            fields: 
+
+            fields:
               - label: Nom du sponsor
                 name: "nom"
                 widget: "string"
@@ -278,10 +259,9 @@ collections:
                 hint: Fera apparaître le logo plus grand
                 widget: "select"
                 name: importance
-                default: ''
+                default: ""
                 required: false
-                options: 
-                  - {label: normal, value: 'normal'}
-                  - {label: important, value: 'important'}
-                  - {label: très important, value: 'very-important'}
-                  
+                options:
+                  - { label: normal, value: "normal" }
+                  - { label: important, value: "important" }
+                  - { label: très important, value: "very-important" }

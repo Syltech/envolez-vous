@@ -21,7 +21,11 @@ module.exports = function (eleventyConfig) {
     return converter.makeHtml(md);
   });
   eleventyConfig.addFilter("displayPhoneNumber", (phoneNumber) => {
-    return phoneNumber.replace(/[^\d]/g, "").match(/.{2}/g).join(" ");
+    try {
+      return phoneNumber.replace(/[^\d]/g, "").match(/.{2}/g).join(" ");
+    } catch (e) {
+      return null;
+    }
   });
   return {
     dir: {

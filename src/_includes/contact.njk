@@ -1,27 +1,29 @@
 <section id="contact" class="dark">
-    <span class="bouton bt-dark"
+  <span class="bouton bt-dark"
         >
-        <i class="far fa-envelope"></i
+    <i class="far fa-envelope"></i
         >
-        <a href="mailto:{{socials.mail}}">Mail</a>
-    </span
+    <a href="mailto:{{socials.mail}}">Mail</a>
+  </span
       >
-    <span class="bouton bt-dark bt-facebook"
+  <span class="bouton bt-dark bt-facebook"
         >
-        <a
+    <a
           class="facebook"
           href="{{socials.facebook}}"
           >
-            <i class="fab fa-facebook-square"></i>Facebook</a
+      <i class="fab fa-facebook-square"></i>Facebook</a
         >
-    </span
+  </span
       >
+  {% if socials.phone %}
     <span class="bouton bt-dark"
         >
-        <a href="tel:{{ socials.phone }}"
+      <a href="tel:{{ socials.phone }}"
           >
-            <i class="fas fa-phone-alt"></i>{{ socials.phone | displayPhoneNumber}}</a
+        <i class="fas fa-phone-alt"></i>{{ socials.phone | displayPhoneNumber}}</a
         >
     </span
       >
+  {% endif %}
 </section>
