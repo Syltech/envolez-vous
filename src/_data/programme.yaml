@@ -1,24 +1,24 @@
 evenements:
-  - datetime: 25/02/2024 10:30
+  - datetime: 23/02/2025 10:30
     informations: >-2
-       Clôture des inscriptions en ligne le 23/02/2023 à 23:00
+       Clôture des inscriptions en ligne le 22/02/2025 à 23:00
 
       Possibilité de s'inscrire sur place le jour de la course avant 10:30 (attention les tarifs sont majorés).
     type: right
-  - datetime: 24/02/2024 14:00
+  - datetime: 22/02/2025 14:00
     informations: >-
-      Retrait des dossards le 24/02/2024 entre 14h00 et 19h00 au magasin Running
+      Retrait des dossards le 22/02/2025 entre 14h00 et 19h00 au magasin Running
       Conseil.
 
 
-      Retrait des dossards le 25/02/2024 de 9h00 à 10h30.
+      Retrait des dossards le 23/02/2025 de 9h00 à 10h30.
     type: right
-  - datetime: 25/02/2024 10:00
+  - datetime: 23/02/2025 10:00
     informations: Départ course enfants
     type: right
-  - datetime: 25/02/2024 10:30
+  - datetime: 23/02/2025 10:30
     informations: D﻿épart des courses adaptées
     type: right
-  - datetime: 25/02/2024 11:00
+  - datetime: 23/02/2025 11:00
     informations: Départ course 5km et 11km
     type: right
